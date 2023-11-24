@@ -1,0 +1,121 @@
+.container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  width: 400px;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  z-index: -1;
+  filter: blur(10px); /* Arka planı biraz bulanıklaştırabilirsiniz */
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5); /* Tamamen şeffaf beyaz arkaplan */
+  border-radius: 20px;
+  z-index: -1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header {
+  background-color: #4054b2; /* Mavi tonu */
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 24px;
+  border-bottom: 2px solid #fff;
+}
+
+.text {
+  font-weight: bold;
+}
+
+.underline {
+  height: 2px;
+  width: 50px;
+  background-color: #fff;
+  margin: 10px auto;
+}
+
+.inputs {
+  padding: 20px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.input img {
+  margin-right: 10px;
+}
+
+.input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.forgot-password {
+  text-align: center;
+  color: #ccc;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.forgot-password span {
+  color: #fff;
+  cursor: pointer;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 2px;
+}
+
+.submit-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.submit {
+  flex: 1;
+  margin-right: 10px;
+  background-color: #4054b2; /* Mavi tonu */
+  color: #fff;
+  padding: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit:last-child {
+  margin-right: 0;
+}
