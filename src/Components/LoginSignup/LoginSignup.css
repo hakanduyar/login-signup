@@ -14,7 +14,7 @@
   bottom: 0;
   background: inherit;
   z-index: -1;
-  filter: blur(10px); /* Arka planı biraz bulanıklaştırabilirsiniz */
+  filter: blur(10px);
 }
 
 .container::after {
